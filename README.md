@@ -98,14 +98,34 @@ npm start
 ### Enlaces de interes
 
 https://es.reactjs.org/docs/create-a-new-react-app.html
+
 https://www.w3schools.com/
+
 https://getbootstrap.com/
+
 https://es.reactjs.org/tutorial/tutorial.html
+
+Para aplicaciones moviles
+
+https://reactnative.dev/
 
 #### Canales de youtube
 https://www.youtube.com/c/CarlosAzaustre/videos
+
 https://www.youtube.com/c/MouredevApps/videos
+
 https://www.youtube.com/channel/UCsmEAwbV7WbYndpQKbY4Ntw
+
 https://www.youtube.com/c/JuanVillalvazoChannel/videos
+
 https://www.youtube.com/c/Freecodecamp/videos
+
 https://www.youtube.com/c/Platzi/videos
+
+### Enclace gogoledocs
+
+https://docs.google.com/document/d/1IJYc9putiOiXyRILxYI7Ces74JCby6pDaXsEID0kBC8/edit?usp=sharing
+
+
+correo de contacto
+lenisandres5@gmail.com
