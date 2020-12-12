@@ -41,8 +41,6 @@ https://www.youtube.com/c/CarlosAzaustre/videos
 
 https://www.youtube.com/c/MouredevApps/videos
 
-https://www.youtube.com/channel/UCsmEAwbV7WbYndpQKbY4Ntw
-
 https://www.youtube.com/c/JuanVillalvazoChannel/videos
 
 https://www.youtube.com/c/Freecodecamp/videos
