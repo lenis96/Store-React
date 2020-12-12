@@ -1,0 +1,33 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Licuadora",
+            "description": "lorem ipsum",
+            "image_url": "https://falabella.scene7.com/is/image/FalabellaCO/4044397_1?wid=1500&hei=1500&qlt=70",
+            "price": 150000
+        },
+        {
+            "id": 2,
+            "name": "Cafetera",
+            "description": "lorem ipsum",
+            "image_url": "https://falabella.scene7.com/is/image/FalabellaCO/2701222_1?wid=1500&hei=1500&qlt=70",
+            "price": 90000
+        },
+        {
+            "id": 3,
+            "name": "Micro ondas",
+            "description": "lorem ipsum",
+            "image_url": "https://falabella.scene7.com/is/image/FalabellaCO/880291577_1?wid=1500&hei=1500&qlt=70",
+            "price": 200000
+        },
+        {
+            "id": 4,
+            "name": "Licuadora",
+            "description": "lorem ipsum",
+            "image_url": "https://falabella.scene7.com/is/image/FalabellaCO/880209824_1?wid=1500&hei=1500&qlt=70",
+            "price": 40000
+        }
+    ],
+    "orders": []
+}

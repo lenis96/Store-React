@@ -189,15 +189,15 @@ class StoreView extends Component {
                             El nombre del comprador es requerido
                         </div>
                     </div> : null}
-                    {this.state.show_success ?
-                        <div className="col-12">
-                            <div class="alert alert-success" role="alert">
-                                La compra ha sido exitosa
-                    </div>
-                        </div>
-                        : null}
                 </div>
-                : <div><h2>Producto no seleccionado</h2></div>}
+                : <div><h2>Carro de Compras Vacio</h2></div>}
+                {this.state.show_success ?
+                    <div className="col-12">
+                        <div class="alert alert-success" role="alert">
+                            La compra ha sido exitosa
+                </div>
+                    </div>
+                    : null}
 
         </div>
     }
