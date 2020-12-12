@@ -127,5 +127,5 @@ https://www.youtube.com/c/Platzi/videos
 https://docs.google.com/document/d/1IJYc9putiOiXyRILxYI7Ces74JCby6pDaXsEID0kBC8/edit?usp=sharing
 
 
-correo de contacto
+# correo de contacto
 lenisandres5@gmail.com
