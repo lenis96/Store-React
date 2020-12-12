@@ -7,9 +7,7 @@ class StoreView extends Component {
 
         this.state = {
             products: [],
-            selected_product: null,
             quantities: [1, 2, 3, 4, 5, 6],
-            quantity: 1,
             shoping_car: [],
             input_name: '',
             show_alert_name: false,
@@ -24,23 +22,21 @@ class StoreView extends Component {
         })
     }
 
-    selectProduct = (product) => {
-        console.log("selected_product", product)
-        this.setState({ selected_product: product });
-    }
 
-    setQauntity = (quantity) => {
+    changeQuantity = (quantity,index) => {
         console.log("set quantity", quantity.target.value)
-        this.setState({ quantity: quantity.target.value })
+        let shoping_car = this.state.shoping_car
+        shoping_car[index].quantity = quantity.target.value
+        this.setState({ shoping_car: shoping_car })
     }
 
-    addToShoppingCar = () => {
-        let new_item = this.state.selected_product;
-        new_item.quantity = this.state.quantity;
+    addToShoppingCar = (product) => {
+        let new_item = product;
+        new_item.quantity = 1;
         let shoping_car = this.state.shoping_car;
         shoping_car.push(new_item);
         console.log("NEW SHOPING CAR", shoping_car);
-        this.setState({ shoping_car: shoping_car, quantity: 1, selected_product: null })
+        this.setState({ shoping_car: shoping_car,})
     }
 
     totalPrice = () => {
@@ -95,14 +91,13 @@ class StoreView extends Component {
 
                 {this.state.products.map(product => {
                     return <div className="col-3">
-                        {/* <div className="card" style={{width: "18rem"}}> */}
                         <div className="card">
                             <img className="card-img-top" src={product.image_url} alt="Card image cap" />
                             <div className="card-body">
                                 <h5 className="card-title">{product.name}</h5>
                                 <p className="card-text">{product.description}</p>
                                 <p className="card-text">$ {product.price}</p>
-                                <button onClick={() => { this.selectProduct(product) }} href="#" className="btn btn-primary">Comprar</button>
+                                <button onClick={() => { this.addToShoppingCar(product) }} href="#" className="btn btn-primary">Comprar</button>
                             </div>
                         </div>
                     </div>
@@ -110,37 +105,7 @@ class StoreView extends Component {
 
 
             </div>
-            {this.state.selected_product ?
-                <div className="row">
-                    <div className="col-12">
-                        <div className="card">
-                            <div className="form-row">
-                                <div className="col">
-
-                                    <p>{this.state.selected_product.name}</p>
-                                </div>
-                                <div className="col">
-                                    <p>Precio U: {this.state.selected_product.price}</p>
-                                </div>
-                                <div className="col">
-
-                                    <select onChange={(val) => { this.setQauntity(val) }} className="form-control">
-                                        {this.state.quantities.map(quantity => {
-                                            return <option value={quantity}>{quantity}</option>
-                                        })}
-                                    </select>
-                                </div>
-                                <div className="col">
-                                    <p>total: {this.state.selected_product.price * this.state.quantity}</p>
-                                </div>
-                                <div className="col">
-                                    <button onClick={() => { this.addToShoppingCar() }} className="btn btn-primary">Añadir al carrito</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                : <div><h2>Producto no seleccionado</h2></div>}
+           
             <h2>Carrito de compras</h2>
             <table class="table">
                 <thead>
@@ -159,7 +124,13 @@ class StoreView extends Component {
                             <th scope="row">{index + 1}</th>
                             <td>{item.name}</td>
                             <td>{item.price}</td>
-                            <td>{item.quantity}</td>
+                            <td>
+                                <select className="form-control" value={item.product} onChange={(value)=>{this.changeQuantity(value,index)}}>
+                                    {this.state.quantities.map(quantity=>{
+                                        return <option value={quantity}>{quantity}</option>
+                                    })}                                
+                                </select>
+                            </td>
                             <td>{item.price * item.quantity}</td>
                             <td><button onClick={() => { this.deleteItem(index) }} className="btn btn-danger">Eliminar</button></td>
                         </tr>
@@ -175,7 +146,7 @@ class StoreView extends Component {
                             <div className="form-row">
                                 <div className="col">
 
-                                    <input value={this.state.input_name} onChange={(value) => { this.changeName(value) }} type="text"></input>
+                                    <input className="form-control" value={this.state.input_name} onChange={(value) => { this.changeName(value) }} type="text"></input>
                                 </div>
                                 <div className="col">
                                     <button onClick={() => { this.finishShopping() }} className="btn btn-success">Finalizar Compra</button>
