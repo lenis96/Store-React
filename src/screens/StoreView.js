@@ -1,6 +1,8 @@
 import { Component } from 'react'
 import axios from 'axios'
 
+import Product from './../components/Product';
+
 class StoreView extends Component {
     constructor(props) {
         super(props);
@@ -90,24 +92,14 @@ class StoreView extends Component {
 
 
                 {this.state.products.map(product => {
-                    return <div className="col-3">
-                        <div className="card">
-                            <img className="card-img-top" src={product.image_url} alt="Card image cap" />
-                            <div className="card-body">
-                                <h5 className="card-title">{product.name}</h5>
-                                <p className="card-text">{product.description}</p>
-                                <p className="card-text">$ {product.price}</p>
-                                <button onClick={() => { this.addToShoppingCar(product) }} href="#" className="btn btn-primary">Comprar</button>
-                            </div>
-                        </div>
-                    </div>
+                    return  <Product key={product.id} product={product} addToShoppingCar={this.addToShoppingCar}></Product>
                 })}
 
 
             </div>
            
             <h2>Carrito de compras</h2>
-            <table class="table">
+            <table className="table">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
