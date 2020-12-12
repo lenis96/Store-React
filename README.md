@@ -68,3 +68,44 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+# Comandos para comenzar con React
+npx create-react-app my-app
+
+cd my-app
+
+npm start
+
+## instalar otras paquetes
+npm install --save bootstrap  
+
+npm install --save axios
+
+npm install -g json-server 
+
+## Correr json server
+
+json-server --watch db.json -p 5000
+
+## Correr react
+
+npm start
+
+
+
+### Enlaces de interes
+
+https://es.reactjs.org/docs/create-a-new-react-app.html
+https://www.w3schools.com/
+https://getbootstrap.com/
+https://es.reactjs.org/tutorial/tutorial.html
+
+#### Canales de youtube
+https://www.youtube.com/c/CarlosAzaustre/videos
+https://www.youtube.com/c/MouredevApps/videos
+https://www.youtube.com/channel/UCsmEAwbV7WbYndpQKbY4Ntw
+https://www.youtube.com/c/JuanVillalvazoChannel/videos
+https://www.youtube.com/c/Freecodecamp/videos
+https://www.youtube.com/c/Platzi/videos
